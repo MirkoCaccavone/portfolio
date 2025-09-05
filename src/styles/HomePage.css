@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-container {
+    display: flex;
+}
+
+.left-content {
+    background-color: red;
+    width: 35%;
+}
+
+.right-content {
+    background-color: green;
+    width: 65%;
+}
