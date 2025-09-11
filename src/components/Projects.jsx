@@ -1,10 +1,17 @@
+
+// Importa useState per gestire lo stato locale del componente
 import { useState } from 'react';
+// Importa motion e AnimatePresence per animazioni React
 import { motion, AnimatePresence } from 'framer-motion';
+// Importa lo stile CSS specifico per la sezione progetti
 import '../styles/Projects.css';
 
+// Componente principale che mostra la sezione dei progetti
 const Projects = () => {
+    // Stato per gestire quale progetto è selezionato per la modale
     const [selectedProject, setSelectedProject] = useState(null);
 
+    // Array di oggetti che rappresentano i progetti da mostrare
     const projects = [
         {
             title: "Next Level Shop",
@@ -30,6 +37,9 @@ const Projects = () => {
         },
     ];
 
+    // Modale che mostra la demo del progetto selezionato (solo proprietà esistenti)
+
+    // Modale che mostra la demo del progetto selezionato (solo proprietà esistenti)
     const ProjectModal = ({ project, onClose }) => (
         <motion.div
             className="project-modal-overlay"
@@ -45,45 +55,87 @@ const Projects = () => {
                 exit={{ y: 50, opacity: 0 }}
                 onClick={e => e.stopPropagation()}
             >
+                {/* Pulsante per chiudere la modale */}
                 <button className="modal-close" onClick={onClose}>×</button>
                 <h2>{project.title} - Demo</h2>
                 <div className="demo-media-container">
-                    {project.demoMedia.map((media, index) => (
-                        <div key={index} className="demo-media-item">
-                            {media.type === 'image' ? (
-                                <img src={media.url} alt={media.caption} />
-                            ) : (
-                                <video controls>
-                                    <source src={media.url} type="video/mp4" />
-                                    Il tuo browser non supporta il tag video.
-                                </video>
-                            )}
-                            <p className="demo-caption">{media.caption}</p>
-                        </div>
-                    ))}
+                    {/* Mostra il video o l'immagine principale del progetto */}
+                    {project.image.endsWith('.mp4') ? (
+                        <video controls style={{ maxWidth: '100%' }}>
+                            <source src={project.image} type="video/mp4" />
+                            Il tuo browser non supporta il tag video.
+                        </video>
+                    ) : (
+                        <img src={project.image} alt={project.title} style={{ maxWidth: '100%' }} />
+                    )}
+                </div>
+                <div className="project-info-modal">
+                    <p>{project.description}</p>
+                    <div className="project-tech">
+                        {project.tech.map((tech, i) => (
+                            <span key={i} className="tech-tag">{tech}</span>
+                        ))}
+                    </div>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </motion.div>
         </motion.div>
     );
+
+    // const ProjectModal = ({ project, onClose }) => (
+    //     <motion.div
+    //         className="project-modal-overlay"
+    //         initial={{ opacity: 0 }}
+    //         animate={{ opacity: 1 }}
+    //         exit={{ opacity: 0 }}
+    //         onClick={onClose}
+    //     >
+    //         <motion.div
+    //             className="project-modal-content"
+    //             initial={{ y: 50, opacity: 0 }}
+    //             animate={{ y: 0, opacity: 1 }}
+    //             exit={{ y: 50, opacity: 0 }}
+    //             onClick={e => e.stopPropagation()}
+    //         >
+    //             <button className="modal-close" onClick={onClose}>×</button>
+    //             <h2>{project.title} - Demo</h2>
+    //             <div className="demo-media-container">
+    //                 {project.demoMedia.map((media, index) => (
+    //                     <div key={index} className="demo-media-item">
+    //                         {media.type === 'image' ? (
+    //                             <img src={media.url} alt={media.caption} />
+    //                         ) : (
+    //                             <video controls>
+    //                                 <source src={media.url} type="video/mp4" />
+    //                                 Il tuo browser non supporta il tag video.
+    //                             </video>
+    //                         )}
+    //                         <p className="demo-caption">{media.caption}</p>
+    //                     </div>
+
     return (
+        // Sezione principale dei progetti con animazione di fade-in
         <motion.section
             className="projects-container"
             id="projects"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0 }} // Opacità iniziale
+            animate={{ opacity: 1 }} // Opacità finale
+            transition={{ duration: 0.6 }} // Durata dell'animazione
         >
+            {/* Titolo della sezione */}
             <h2>I Miei Progetti</h2>
 
+            {/* Griglia dei progetti */}
             <div className="projects-grid">
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
                         className="project-card"
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 20 }} // Animazione di entrata
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
+                        transition={{ delay: index * 0.1 }} // Ritardo progressivo per effetto "cascade"
                     >
+                        {/* Immagine o video del progetto */}
                         <div className="project-image">
                             {project.image.endsWith('.mp4') ? (
                                 <video autoPlay loop muted playsInline>
@@ -93,17 +145,23 @@ const Projects = () => {
                             ) : (
                                 <img src={project.image} alt={project.title} />
                             )}
+                            {/* Overlay con doppia azione: link GitHub, modale demo e pagina dedicata */}
                             <div className="project-overlay">
+                                {/* Link al repository GitHub */}
                                 <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+
+                                {/* Link per navigare alla pagina dedicata del progetto */}
                                 <a href={`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`} className="demo-link">
                                     Vedi Demo
                                 </a>
                             </div>
                         </div>
+                        {/* Informazioni sul progetto */}
                         <div className="project-info">
                             <h3>{project.title}</h3>
                             <p>{project.description}</p>
                             <div className="project-tech">
+                                {/* Elenco delle tecnologie usate */}
                                 {project.tech.map((tech, i) => (
                                     <span key={i} className="tech-tag">{tech}</span>
                                 ))}
@@ -113,6 +171,7 @@ const Projects = () => {
                 ))}
             </div>
 
+            {/* Modale demo progetto */}
             <AnimatePresence>
                 {selectedProject && (
                     <ProjectModal
@@ -125,4 +184,5 @@ const Projects = () => {
     )
 }
 
-export default Projects
+// Esporta il componente per poterlo utilizzare in altre parti dell'applicazione
+export default Projects;

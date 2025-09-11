@@ -1,19 +1,36 @@
+/* =====================
+   Reset CSS di base
+   ===================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+/* =====================
+   Contenitore Principale della Home
+   ===================== */
 .home-container {
     display: flex;
 }
 
+
+/* =====================
+   Colonna Sinistra (Sidebar)
+   ===================== */
 .left-content {
     background-color: red;
+    /* Da personalizzare */
     width: 35%;
 }
 
+
+/* =====================
+   Colonna Destra (Contenuti principali)
+   ===================== */
 .right-content {
     background-color: green;
+    /* Da personalizzare */
     width: 65%;
 }

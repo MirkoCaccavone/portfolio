@@ -1,3 +1,6 @@
+/* =====================
+    Contenitore Principale About
+    ===================== */
 .about {
     padding: 2rem;
     min-height: 100vh;
@@ -8,6 +11,7 @@
     color: white;
 }
 
+/* Titolo della sezione About */
 .about h2 {
     font-size: 2rem;
     margin: 3rem 0;
@@ -27,6 +31,9 @@
     background: linear-gradient(90deg, transparent, #ff4d4d, transparent);
 }
 
+/* =====================
+    Contenuto Testuale About
+    ===================== */
 .about-content {
     text-align: center;
 }
@@ -51,6 +58,9 @@
     color: #e0e0e0;
 }
 
+/* =====================
+    Skills Overview Grid
+    ===================== */
 .skills-overview {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -58,6 +68,9 @@
     padding: 0.5rem;
 }
 
+/* =====================
+    Card Skill
+    ===================== */
 .skill-card {
     background: rgba(255, 255, 255, 0.05);
     padding: 1.5rem;
@@ -87,6 +100,9 @@
     font-size: 0.9rem;
 }
 
+/* =====================
+    Evidenziazione Testo
+    ===================== */
 .highlight {
     color: #ff5050;
     font-weight: bold;

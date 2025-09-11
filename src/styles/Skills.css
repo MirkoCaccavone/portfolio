@@ -1,8 +1,15 @@
+/* =====================
+   Contenitore Principale
+   ===================== */
 .skills-container {
     padding: 4rem 2rem;
     background: #1f1f1f;
 }
 
+
+/* =====================
+   Titolo Sezione Skills
+   ===================== */
 .skills-container h2 {
     font-size: 2rem;
     margin: 3rem 0;
@@ -11,6 +18,8 @@
     color: #ffffff;
 }
 
+
+/* Linea decorativa sotto il titolo */
 .skills-container h2::after {
     content: '';
     position: absolute;
@@ -22,6 +31,10 @@
     background: linear-gradient(90deg, transparent, #ff4d4d, transparent);
 }
 
+
+/* =====================
+   Griglia delle Skill
+   ===================== */
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
@@ -34,6 +47,10 @@
     margin: 0 auto;
 }
 
+
+/* =====================
+   Card Singola Skill
+   ===================== */
 .skill-item {
     background: rgba(255, 255, 255, 0.05);
     width: 30%;
@@ -49,11 +66,17 @@
     /* Ridotto il margine */
 }
 
+
+/* Effetto hover sulla card skill */
 .skill-item:hover {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.08);
 }
 
+
+/* =====================
+   Info Skill (nome e percentuale)
+   ===================== */
 .skill-info {
     display: flex;
     justify-content: space-between;
@@ -61,12 +84,14 @@
     margin-bottom: 0.5rem;
 }
 
+
 .skill-name {
     font-size: 0.9rem;
     margin-right: 10px;
     font-weight: 500;
     color: #ffffff;
 }
+
 
 .skill-percentage {
     font-size: 0.9rem;
@@ -76,6 +101,10 @@
     animation: glow 2s ease-in-out infinite;
 }
 
+
+/* =====================
+   Barra Skill (contenitore)
+   ===================== */
 .skill-bar {
     /* width: 100%; */
     height: 6px;
@@ -87,6 +116,10 @@
     /* Permette alla barra di uscire */
 }
 
+
+/* =====================
+   Barra Skill (riempimento animato)
+   ===================== */
 .skill-bar-fill {
     position: absolute;
     left: 0;
@@ -97,6 +130,8 @@
     transition: width 1.5s ease-out;
 }
 
+
+/* Effetto "luccichio" sulla punta della barra */
 .skill-bar-fill::after {
     content: '';
     position: absolute;
@@ -109,6 +144,10 @@
     animation: pulse 1.5s infinite;
 }
 
+
+/* =====================
+   Animazioni Keyframes
+   ===================== */
 @keyframes pulse {
     0% {
         opacity: 1;
@@ -124,12 +163,17 @@
 }
 
 /* Effetto hover sulla barra delle skills */
+
+/* Effetto hover sulla barra delle skills */
 .skill-item:hover .skill-bar-fill {
     filter: brightness(1.2);
     box-shadow: 0 0 15px rgba(255, 77, 77, 0.5);
 }
 
-/* Media Queries per il responsive design */
+
+/* =====================
+   Responsive Design
+   ===================== */
 @media (max-width: 768px) {
     .skills-grid {
         grid-template-columns: 1fr;
@@ -147,7 +191,8 @@
     }
 }
 
-/* Animazione per le skill cards */
+
+/* Animazione per le skill cards (fade in dal basso) */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -159,6 +204,7 @@
         transform: translateY(0);
     }
 }
+
 
 /* Effetto glowing per le percentuali */
 @keyframes glow {
@@ -173,10 +219,15 @@
     }
 }
 
+
+/* =====================
+   Effetti Speciali sulle Barre
+   ===================== */
 .skill-bar-fill.overfill {
     animation: bounce 0.6s infinite alternate;
     background: linear-gradient(90deg, #ff4d4d 70%, #ffd700 100%);
 }
+
 
 @keyframes bounce {
     0% {
@@ -187,6 +238,7 @@
         transform: scaleX(1.05) translateY(-3px);
     }
 }
+
 
 
 .skill-bar-fill.tired {

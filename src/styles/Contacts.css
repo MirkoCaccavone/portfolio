@@ -1,3 +1,6 @@
+/* =====================
+    Contenitore Principale Contatti
+    ===================== */
 .contacts-container {
     padding: 4rem 2rem;
     background: #1f1f1f;
@@ -7,6 +10,7 @@
     align-items: center;
 }
 
+/* Titolo della sezione contatti */
 .contacts-container h2 {
     font-size: 2rem;
     margin: 3rem 0;
@@ -25,6 +29,9 @@
     background: linear-gradient(90deg, transparent, #ff4d4d, transparent);
 }
 
+/* =====================
+    Layout Contenuti Contatti
+    ===================== */
 .contacts-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -33,6 +40,9 @@
     max-width: 1200px;
 }
 
+/* =====================
+    Info Contatto (colonna sinistra)
+    ===================== */
 .contact-info {
     display: flex;
     flex-direction: column;
@@ -54,6 +64,9 @@
     color: #ff4d4d;
 }
 
+/* =====================
+    Form Contatti (colonna destra)
+    ===================== */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -91,6 +104,9 @@
     background: #ff6666;
 }
 
+/* =====================
+    Responsive
+    ===================== */
 @media (max-width: 768px) {
     .contacts-content {
         grid-template-columns: 1fr;

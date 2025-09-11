@@ -1,3 +1,6 @@
+/* =====================
+    Sidebar Principale
+    ===================== */
 .sidebar {
     width: 35%;
     height: 100vh;
@@ -11,16 +14,23 @@
     padding: 0;
 }
 
+/* Sidebar con effetto scroll */
 .sidebar-scrolled {
     transform: translateY(-20px);
 }
 
+/* =====================
+    Contenuto Sidebar
+    ===================== */
 .sidebar-content {
     width: 100%;
     /* max-width: 300px; */
     position: relative;
 }
 
+/* =====================
+    Immagine Profilo Sidebar
+    ===================== */
 .image-container {
     position: relative;
     width: 100%;
@@ -52,6 +62,9 @@
     opacity: 1;
 }
 
+/* =====================
+    Overlay Testo e Info Profilo
+    ===================== */
 .overlay-content {
     position: absolute;
     bottom: 0;
@@ -72,6 +85,9 @@
     transition: background 0.3s;
 }
 
+/* =====================
+    Testo Introduttivo e Typewriter
+    ===================== */
 .intro {
     margin-bottom: 15px;
     display: flex;
@@ -140,6 +156,9 @@
     }
 }
 
+/* =====================
+    Social Links Sidebar
+    ===================== */
 .socials {
     display: flex;
     justify-content: center;
@@ -209,6 +228,9 @@
     transform: translateY(-2px);
 }
 
+/* =====================
+    Hover Effetti Overlay e Social
+    ===================== */
 .image-container:hover .overlay-content,
 .image-container:hover .overlay-content h2,
 .image-container:hover .overlay-content p,
