@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import BackButton from '../BackButton';
 import '../../styles/DemoProject.css';
 
 const BoolRoad = () => {
@@ -9,6 +10,7 @@ const BoolRoad = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
+            <BackButton />
             <h1>Boolroad</h1>
             <div className="demo-content">
                 <section className="demo-project-overview">

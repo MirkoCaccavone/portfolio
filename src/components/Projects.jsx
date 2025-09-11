@@ -66,7 +66,7 @@ const Projects = () => {
         </motion.div>
     );
     return (
-        <motion.div
+        <motion.section
             className="projects-container"
             id="projects"
             initial={{ opacity: 0 }}
@@ -121,7 +121,7 @@ const Projects = () => {
                     />
                 )}
             </AnimatePresence>
-        </motion.div>
+        </motion.section>
     )
 }
 

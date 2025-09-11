@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faLaptopCode, faMobileAlt, faDatabase } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 import '../styles/About.css';
 
 const About = () => {
@@ -10,7 +11,7 @@ const About = () => {
         { icon: faDatabase, title: "Database", text: "MySQL, PhpMyAdmin" }
     ];
     return (
-        <div
+        <motion.div
             className="about"
             id="about"
             initial={{ opacity: 0 }}
@@ -43,9 +44,6 @@ const About = () => {
                         <div
                             key={index}
                             className="skill-card"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.2 }}
                         >
                             <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
                             <h3>{skill.title}</h3>
@@ -54,7 +52,7 @@ const About = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

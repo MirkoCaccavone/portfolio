@@ -1,0 +1,25 @@
+.back-button-floating {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #ff4040, #ff4b4b);
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.5);
+    z-index: 999;
+    /* sopra tutto */
+    transition: all 0.3s ease;
+}
+
+.back-button-floating:hover {
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 6px 20px rgba(255, 77, 77, 0.7);
+}

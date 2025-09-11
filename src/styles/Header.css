@@ -60,3 +60,19 @@
 .nav-links button:hover::after {
     width: 100%;
 }
+
+.nav-links button.active {
+    color: red;
+    font-weight: bold;
+    position: relative;
+}
+
+/* .nav-links button.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background: red;
+} */
