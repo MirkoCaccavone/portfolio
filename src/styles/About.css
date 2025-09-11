@@ -38,11 +38,11 @@
     text-align: center;
 }
 
-.about p {
+/* .about p {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #e0e0e0;
-}
+} */
 
 .about-text {
     font-size: 1.2rem;
@@ -106,4 +106,53 @@
 .highlight {
     color: #ff5050;
     font-weight: bold;
+}
+
+/* =====================
+   Responsive Design
+   ===================== */
+
+/* Smartphone medi */
+
+@media (max-width: 576px) {
+
+    /* =====================
+        Contenitore Principale About
+        ===================== */
+    .about {
+        padding: 3rem 0.1rem;
+    }
+
+    /* Titolo della sezione About */
+    .about h2 {
+        font-size: 2.5rem;
+    }
+
+    /* =====================
+        Contenuto Testuale About
+        ===================== */
+
+    .about-text {
+        font-size: 1.4rem;
+    }
+
+    .about-text p {
+        font-size: 1.2rem;
+    }
+
+    /* =====================
+        Card Skill
+        ===================== */
+
+    .skill-icon {
+        font-size: 2.5rem;
+    }
+
+    .skill-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .skill-card p {
+        font-size: 1.2rem;
+    }
 }

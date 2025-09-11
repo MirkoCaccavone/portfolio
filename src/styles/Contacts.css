@@ -135,7 +135,7 @@
 
     .info-item {
         gap: 1.5rem;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .info-item i {
@@ -150,6 +150,48 @@
     .form-group input,
     .form-group textarea,
     .contact-form button {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+    }
+}
+
+/* Smartphone medi */
+
+@media (max-width: 576px) {
+
+    /* =====================
+        Contenitore Principale Contatti
+        ===================== */
+    .contacts-container {
+        padding: 3rem 0.1rem;
+    }
+
+    /* Titolo della sezione contatti */
+    .contacts-container h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* smartphone piccoli */
+
+@media (max-width: 375px) {
+
+    .info-item {
+        gap: 1rem;
+        font-size: 1.15rem;
+    }
+
+    .info-item i {
+        font-size: 1.5rem;
+    }
+
+
+    /* =====================
+        Form Contatti (form)
+        ===================== */
+
+    .form-group input,
+    .form-group textarea,
+    .contact-form button {
+        font-size: 1.3rem;
     }
 }

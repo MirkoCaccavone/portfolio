@@ -267,3 +267,41 @@
         font-size: 1rem;
     }
 }
+
+
+/* Smartphone medi */
+
+@media (max-width: 576px) {
+
+    /* =====================
+       Contenitore Principale
+       ===================== */
+    .skills-container {
+        padding: 3rem 0.1rem;
+    }
+
+    /* =====================
+       Titolo Sezione Skills
+       ===================== */
+    .skills-container h2 {
+        font-size: 2.5rem;
+    }
+
+    /* =====================
+            Griglia delle Skill
+        ===================== */
+    .skills-grid {
+        gap: 2rem;
+    }
+
+    /* =====================
+           Card Singola Skill
+           ===================== */
+    .skill-item {
+        width: 80%;
+    }
+
+    .skill-name {
+        font-size: 1.3rem;
+    }
+}
