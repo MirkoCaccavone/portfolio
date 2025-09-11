@@ -105,6 +105,13 @@
     border-radius: 10px;
 }
 
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
 
 /* =====================
     Overlay Card Progetto (GitHub, Demo, Pagina)
@@ -186,36 +193,6 @@
     border-radius: 15px;
     font-size: 0.9rem;
 }
-
-
-/*=====================
-    Overlay Modale Progetto
-    ===================== */
-/* .project-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    padding: 20px;
-}
-
-
-.project-modal-content {
-    background: #1f1f1f;
-    padding: 2rem;
-    border-radius: 10px;
-    max-width: 90%;
-    max-height: 90vh;
-    overflow-y: auto;
-    position: relative;
-} */
-
 
 /* Bottone chiusura modale */
 .modal-close {
@@ -313,4 +290,61 @@
     .demo-link {
         font-size: 1.2rem;
     }
+}
+
+
+/* Smartphone Grandi*/
+
+@media (max-width: 800px) {
+
+    .projects-grid {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 2rem;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .project-card {
+        width: calc(100% / 2 - 2rem);
+        min-width: 330px;
+        margin-bottom: 20px;
+    }
+
+    /* =====================
+        Immagine/Video Card Progetto
+        ===================== */
+    .project-image {
+        height: 300px;
+        object-fit: cover;
+    }
+
+    /* =====================
+            Info Card Progetto (titolo, descrizione, tech)
+            ===================== */
+    .project-info h3 {
+        font-size: 2rem;
+    }
+
+    .project-info p {
+        margin: 2rem 0;
+        font-size: 1.4rem;
+    }
+
+    .project-tech {
+        gap: 1rem;
+    }
+
+    .tech-tag {
+        font-size: 1.4rem;
+    }
+
+    /* Stile dei bottoni/collegamenti nell'overlay */
+    .project-overlay a,
+    .demo-link {
+        font-size: 1.3rem;
+        padding: 0.5rem 0.4rem;
+    }
+
+
 }

@@ -6,7 +6,6 @@
     height: 100vh;
     position: fixed;
     background-color: #1f1f1f;
-    color: white;
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -213,7 +212,6 @@
 }
 
 .socials a:hover {
-    background: white;
     color: #1f1f1f;
     transform: translateY(-2px);
 }
@@ -237,6 +235,9 @@
 .image-container:hover .socials a {
     border: 1px solid rgb(0, 0, 0);
 }
+
+
+
 
 /* =====================
    Responsive Design
@@ -291,4 +292,81 @@
     .social-link i {
         font-size: 1.4rem;
     }
+}
+
+
+/* Smartphone Grandi*/
+
+@media (max-width: 800px) {
+    .sidebar {
+        width: 100%;
+        /* height: 100vh; */
+        position: static;
+        background-color: #1f1f1f;
+        transition: transform 0.3s ease;
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .profile-img-hover {
+        display: none;
+    }
+
+    .image-container:hover .profile-img {
+        opacity: 1;
+    }
+
+    .image-container:hover .overlay-content {
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    }
+
+    .image-container:hover .overlay-content,
+    .image-container:hover .overlay-content h2,
+    .image-container:hover .overlay-content p,
+    .image-container:hover .overlay-content .typewriter {
+        color: inherit !important;
+        text-shadow: none !important;
+    }
+
+    .image-container:hover .social-link,
+    .image-container:hover .social-link i {
+        color: inherit !important;
+    }
+
+    .image-container:hover .socials a {
+        border: 1px solid white !important;
+    }
+
+    /* =====================
+        Testo Introduttivo e Typewriter
+        ===================== */
+
+    .intro h2 {
+        font-size: 3rem;
+    }
+
+    .typewriter {
+        font-size: 1.6rem;
+    }
+
+    /* =====================
+        Social Links Sidebar
+        ===================== */
+
+    .socials {
+        justify-content: space-evenly;
+        gap: 0;
+    }
+
+    .social-link {
+        width: 55px;
+        height: 55px;
+    }
+
+    .social-link i {
+        font-size: 1.6rem;
+    }
+
 }

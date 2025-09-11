@@ -95,3 +95,18 @@
         font-size: 1.2rem;
     }
 }
+
+@media (max-width: 910px) {
+    .nav-links button {
+        font-size: 1rem;
+    }
+}
+
+
+/* Smartphone Grandi*/
+
+@media (max-width: 800px) {
+    .header {
+        width: 100%;
+    }
+}

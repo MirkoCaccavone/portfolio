@@ -47,3 +47,29 @@
         width: 60%;
     }
 }
+
+@media (max-width: 800px) {
+
+    /* =====================
+       Contenitore Principale della Home
+       ===================== */
+    .home-container {
+        display: block;
+    }
+
+
+    /* =====================
+       Colonna Sinistra (Sidebar)
+       ===================== */
+    .left-content {
+        width: 100%;
+    }
+
+
+    /* =====================
+       Colonna Destra (Contenuti principali)
+       ===================== */
+    .right-content {
+        width: 100%;
+    }
+}
