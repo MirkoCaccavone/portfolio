@@ -14,11 +14,6 @@
     padding: 0;
 }
 
-/* Sidebar con effetto scroll */
-.sidebar-scrolled {
-    transform: translateY(-20px);
-}
-
 /* =====================
     Contenuto Sidebar
     ===================== */
@@ -75,7 +70,6 @@
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
     color: white;
     text-align: center;
-    /* Rimuovi opacity e transition che rendevano il testo visibile solo al hover */
 }
 
 /* Rimuovi questa regola se presente */
@@ -101,14 +95,11 @@
     font-weight: 600;
 }
 
-.intro p {
+.typewriter {
     margin: 5px 0 0;
     font-size: 1.2rem;
     font-weight: 600;
     opacity: 0.9;
-}
-
-.typewriter {
     white-space: nowrap;
     overflow: hidden;
     margin: 0 auto;
@@ -217,7 +208,6 @@
     text-decoration: none;
     padding: 5px 10px;
     border: 1px solid white;
-    border-radius: 20px;
     font-size: 0.8rem;
     transition: all 0.3s ease;
 }
@@ -246,4 +236,59 @@
 
 .image-container:hover .socials a {
     border: 1px solid rgb(0, 0, 0);
+}
+
+/* =====================
+   Responsive Design
+   ===================== */
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 40%;
+    }
+
+    /* =====================
+        Testo Introduttivo e Typewriter
+        ===================== */
+
+    .intro h2 {
+        /* margin: 0; */
+        font-size: 2.5rem;
+        /* font-weight: 600; */
+    }
+
+    .typewriter {
+        font-size: 1.4rem;
+    }
+
+    /* =====================
+        Social Links Sidebar
+        ===================== */
+
+    .social-link {
+        width: 50px;
+        height: 50px;
+    }
+
+    .social-link i {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 900px) {
+
+    /* =====================
+        Social Links Sidebar
+        ===================== */
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-link i {
+        font-size: 1.4rem;
+    }
 }

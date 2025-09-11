@@ -78,3 +78,20 @@
     font-weight: bold;
     position: relative;
 }
+
+
+/* =====================
+   Responsive Design
+   ===================== */
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+    .header {
+        width: calc(100% - 40%);
+    }
+
+    .nav-links button {
+        font-size: 1.2rem;
+    }
+}

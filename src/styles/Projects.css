@@ -63,7 +63,6 @@
     gap: 2rem;
     width: 100%;
     flex-wrap: wrap;
-    /* max-width: 1200px; */
 }
 
 
@@ -189,10 +188,10 @@
 }
 
 
-/* =====================
+/*=====================
     Overlay Modale Progetto
     ===================== */
-.project-modal-overlay {
+/* .project-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -215,7 +214,7 @@
     max-height: 90vh;
     overflow-y: auto;
     position: relative;
-}
+} */
 
 
 /* Bottone chiusura modale */
@@ -273,4 +272,45 @@
     text-align: center;
     color: #cccccc;
     font-size: 0.9rem;
+}
+
+
+/* =====================
+   Responsive Design
+   ===================== */
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+    .project-card {
+        width: 380px;
+        margin-bottom: 20px;
+    }
+
+    /* =====================
+        Info Card Progetto (titolo, descrizione, tech)
+        ===================== */
+    .project-info h3 {
+        font-size: 1.8rem;
+    }
+
+    .project-info p {
+        margin: 1.5rem 0;
+        font-size: 1.2rem;
+    }
+
+    .project-tech {
+        gap: 0.7rem;
+    }
+
+    .tech-tag {
+        font-size: 1.1rem;
+    }
+
+    /* Stile dei bottoni/collegamenti nell'overlay */
+    .project-overlay a,
+    .demo-link {
+        font-size: 1.2rem;
+    }
 }

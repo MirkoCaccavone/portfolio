@@ -107,9 +107,49 @@
 /* =====================
     Responsive
     ===================== */
-@media (max-width: 768px) {
+
+
+/* Tablet */
+
+@media (max-width: 1200px) {
+
+    /* =====================
+        Layout Contenuti Contatti
+        ===================== */
     .contacts-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    /* =====================
+        Info Contatto (parte superiore)
+        ===================== */
+    .contact-info {
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 1rem;
+        /* margin-bottom: 3rem; */
+    }
+
+    .info-item {
+        gap: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .info-item i {
+        font-size: 2rem;
+    }
+
+
+    /* =====================
+        Form Contatti (form)
+        ===================== */
+
+    .form-group input,
+    .form-group textarea,
+    .contact-form button {
+        font-size: 1.2rem;
     }
 }

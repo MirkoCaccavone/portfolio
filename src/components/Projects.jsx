@@ -82,45 +82,11 @@ const Projects = () => {
         </motion.div>
     );
 
-    // const ProjectModal = ({ project, onClose }) => (
-    //     <motion.div
-    //         className="project-modal-overlay"
-    //         initial={{ opacity: 0 }}
-    //         animate={{ opacity: 1 }}
-    //         exit={{ opacity: 0 }}
-    //         onClick={onClose}
-    //     >
-    //         <motion.div
-    //             className="project-modal-content"
-    //             initial={{ y: 50, opacity: 0 }}
-    //             animate={{ y: 0, opacity: 1 }}
-    //             exit={{ y: 50, opacity: 0 }}
-    //             onClick={e => e.stopPropagation()}
-    //         >
-    //             <button className="modal-close" onClick={onClose}>×</button>
-    //             <h2>{project.title} - Demo</h2>
-    //             <div className="demo-media-container">
-    //                 {project.demoMedia.map((media, index) => (
-    //                     <div key={index} className="demo-media-item">
-    //                         {media.type === 'image' ? (
-    //                             <img src={media.url} alt={media.caption} />
-    //                         ) : (
-    //                             <video controls>
-    //                                 <source src={media.url} type="video/mp4" />
-    //                                 Il tuo browser non supporta il tag video.
-    //                             </video>
-    //                         )}
-    //                         <p className="demo-caption">{media.caption}</p>
-    //                     </div>
-
     return (
         // Sezione principale dei progetti con animazione di fade-in
-        <motion.section
+        <section
             className="projects-container"
             id="projects"
-            initial={{ opacity: 0 }} // Opacità iniziale
-            animate={{ opacity: 1 }} // Opacità finale
-            transition={{ duration: 0.6 }} // Durata dell'animazione
         >
             {/* Titolo della sezione */}
             <h2>I Miei Progetti</h2>
@@ -128,12 +94,9 @@ const Projects = () => {
             {/* Griglia dei progetti */}
             <div className="projects-grid">
                 {projects.map((project, index) => (
-                    <motion.div
+                    <div
                         key={index}
                         className="project-card"
-                        initial={{ opacity: 0, y: 20 }} // Animazione di entrata
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }} // Ritardo progressivo per effetto "cascade"
                     >
                         {/* Immagine o video del progetto */}
                         <div className="project-image">
@@ -167,7 +130,7 @@ const Projects = () => {
                                 ))}
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
                 ))}
             </div>
 
@@ -180,7 +143,7 @@ const Projects = () => {
                     />
                 )}
             </AnimatePresence>
-        </motion.section>
+        </section>
     )
 }
 

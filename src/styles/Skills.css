@@ -81,7 +81,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 
@@ -106,7 +106,6 @@
    Barra Skill (contenitore)
    ===================== */
 .skill-bar {
-    /* width: 100%; */
     height: 6px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 3px;
@@ -170,28 +169,6 @@
     box-shadow: 0 0 15px rgba(255, 77, 77, 0.5);
 }
 
-
-/* =====================
-   Responsive Design
-   ===================== */
-@media (max-width: 768px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
-        /* Una sola colonna su mobile */
-        padding: 0.5rem;
-    }
-
-    .skills-container h2 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .skill-item {
-        padding: 0.6rem;
-    }
-}
-
-
 /* Animazione per le skill cards (fade in dal basso) */
 @keyframes fadeInUp {
     from {
@@ -246,4 +223,47 @@
     background: linear-gradient(90deg, #ff4d4d 60%, #616161 100%);
     opacity: 0.7;
     transition: transform 0.6s, background 0.6s, opacity 0.6s;
+
+}
+
+/* =====================
+   Responsive Design
+   ===================== */
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+    /* =====================
+       Contenitore Principale
+       ===================== */
+    .skills-container {
+        padding: 4rem 2rem 1rem;
+    }
+
+    /* =====================
+       Titolo Sezione Skills
+       ===================== */
+    .skills-container h2 {
+        margin: 2rem 0 3rem;
+    }
+
+    /* =====================
+        Griglia delle Skill
+    ===================== */
+    .skills-grid {
+        gap: 1rem;
+    }
+
+    /* =====================
+       Card Singola Skill
+       ===================== */
+    .skill-item {
+        min-height: 100px;
+        width: 47%;
+    }
+
+    .skill-name {
+        font-size: 1rem;
+    }
 }
