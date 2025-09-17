@@ -30,7 +30,7 @@ const Rentora = () => {
                     <div className="video-demo-container">
                         {/* Video dimostrativo del progetto */}
                         <video controls>
-                            <source src="/Noleggio-Veicoli.mp4" type="video/mp4" />
+                            <source src="https://www.dropbox.com/scl/fi/rlwcp2t79urqzj50o99h6/Noleggio-Veicoli.mp4?rlkey=ju67zou8x1k39wx0a67miuguy&st=0608e46n&raw=1" type="video/mp4" />
                             {/* Messaggio di fallback se il browser non supporta il video */}
                             Il tuo browser non supporta il tag video.
                         </video>

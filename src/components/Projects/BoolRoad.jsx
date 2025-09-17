@@ -30,7 +30,7 @@ const BoolRoad = () => {
                     <div className="video-demo-container">
                         {/* Video dimostrativo del progetto */}
                         <video controls>
-                            <source src="/Bool-road.mp4" type="video/mp4" />
+                            <source src="https://www.dropbox.com/scl/fi/52e0eztucp55mlyywm019/Bool-road.mp4?rlkey=jfvppd0a135owk7oo7j1g0pjv&st=qexn0ny1&raw=1" />
                             {/* Messaggio di fallback se il browser non supporta il video */}
                             Il tuo browser non supporta il tag video.
                         </video>

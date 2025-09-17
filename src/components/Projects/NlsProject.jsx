@@ -30,7 +30,7 @@ const NlsProject = () => {
                     <div className="video-demo-container">
                         {/* Video dimostrativo del progetto */}
                         <video controls>
-                            <source src="/demoNls.mp4" type="video/mp4" />
+                            <source src="https://www.dropbox.com/scl/fi/2yxp5mg9bpblmktm70pzp/demoNls.mp4?rlkey=ro9ohff0vls7cepjomtoootws&st=6nt86jon&raw=1" type="video/mp4" />
                             {/* Messaggio di fallback se il browser non supporta il video */}
                             Il tuo browser non supporta il tag video.
                         </video>
