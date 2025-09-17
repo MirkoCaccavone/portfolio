@@ -25,14 +25,14 @@ const Projects = () => {
             title: "Rentora",
             description: "Piattaforma web per prenotare e gestire mezzi di trasporto (auto, bici, scooter, van) con area utente in React e pannello admin in Laravel.",
             tech: ["React", "Laravel (PHP)", "MySQL", "CSS"],
-            image: "/public/RENTORA1.mp4", // o .jpg/.png se è un'immagine
+            image: "/RENTORA1.mp4", // o .jpg/.png se è un'immagine
             github: "https://github.com/MirkoCaccavone/noleggio-mezzi"
         },
         {
             title: "Boolroad",
             description: "Web app per agenzie di viaggio che permette ai coordinatori di gestire i partecipanti, contatti e informazioni importanti da qualsiasi dispositivo.",
             tech: ["React", "Vite", "Node.js", "Bootstrap", "CSS"],
-            image: "/public/logo-boolroad.png", // o .jpg/.png se è un'immagine
+            image: "/logo-boolroad.png", // o .jpg/.png se è un'immagine
             github: "https://github.com/MirkoCaccavone/boolroad"
         },
     ];
