@@ -63,7 +63,8 @@ const Sidebar = () => {
                         <div className="intro">
                             {/* Titolo e scritta animata */}
                             <h2>Ciao, sono Mirko</h2>
-                            <p className="typewriter">{text}</p>
+                            {/* Quando text è una stringa vuota viene visualizzato uno spazio invisibile */}
+                            <p className="typewriter">{text === "" ? "\u00A0" : text}</p>
                         </div>
                         {/* Sezione link social */}
                         <div className="socials">
